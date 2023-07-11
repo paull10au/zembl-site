@@ -4790,7 +4790,7 @@ Webflow.push(function() {
     <!-- ...... -->
 
 
-    <script type='text/javascript' src='https://service.force.com/embeddedservice/menu/fab.min.js'></script>
+    <!-- <script type='text/javascript' src='https://service.force.com/embeddedservice/menu/fab.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
 		// Required if you want labels in a language that’s different from your user’s context.
@@ -4815,7 +4815,7 @@ Webflow.push(function() {
 	} else {
 		initESW('https://service.force.com');
 	}
-</script>
+</script> -->
 
 
 <!-- ....... -->
@@ -4838,6 +4838,30 @@ function initEmbeddedMessaging() {
 };
 </script>
 <script type='text/javascript' src='https://wt20230215-demo.my.site.com/ESWMessagingforWebv21688985190267/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script> -->
+
+
+
+
+<!-- *** Embedded Messaging -->
+
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+			embeddedservice_bootstrap.init(
+				'00D2w00000QuLhO',
+				'Messaging_For_Web',
+				'https://wt20230215-demo.my.site.com/ESWMessagingForWeb1688901018613',
+				{
+					scrt2URL: 'https://wt20230215-demo.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://wt20230215-demo.my.site.com/ESWMessagingForWeb1688901018613/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
   </body>
 </html>
